@@ -11,13 +11,13 @@ const Form = ({text, setText, todos, setTodos}) => {
         setTodos([
             ...todos, {text: text, completed: false, id: uuidv4()}
         ])
-
+        setText("");
     }
 
     return (
         <form className="todo-form">
             <div className="input-container">
-                <input onChange={inputHandler} type="text" className="todo-input" />
+                <input value={text} onChange={inputHandler} type="text" className="todo-input" />
                 <button onClick={submitHandler} className="todo-button" type="submit">+</button>
             </div>
             <div className="select-container">
