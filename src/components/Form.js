@@ -1,12 +1,22 @@
-const Form = () => {
+const Form = ({text, setText, todos, setTodos}) => {
+
     const inputHandler = (e) => {
-        console.log(e.target.value);
+        setText(e.target.value);
     }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        setTodos([
+            ...todos, {text: text, completed: false, }
+        ])
+
+    }
+
     return (
         <form className="todo-form">
             <div className="input-container">
                 <input onChange={inputHandler} type="text" className="todo-input" />
-                <button className="todo-button" type="submit">+</button>
+                <button onClick={submitHandler} className="todo-button" type="submit">+</button>
             </div>
             <div className="select-container">
                 <select name="todos" className="filter-todo">
