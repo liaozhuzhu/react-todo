@@ -11,7 +11,7 @@ function App() {
       <header>
         <h1>Todo List</h1>
         <Form text={text} setText={setText} todos={todos} setTodos={setTodos}/>
-        <TodoList />
+        <TodoList todos={todos}/>
       </header>
     </div>
   );
