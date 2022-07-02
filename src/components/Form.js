@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const Form = ({text, setText, todos, setTodos}) => {
 
     const inputHandler = (e) => {
@@ -7,7 +9,7 @@ const Form = ({text, setText, todos, setTodos}) => {
     const submitHandler = (e) => {
         e.preventDefault();
         setTodos([
-            ...todos, {text: text, completed: false, }
+            ...todos, {text: text, completed: false, id: uuidv4()}
         ])
 
     }
