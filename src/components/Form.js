@@ -8,10 +8,12 @@ const Form = ({text, setText, todos, setTodos, setStatus}) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        setTodos([
-            ...todos, {text: text, completed: false, id: uuidv4()}
-        ])
-        setText("");
+        if (text !== "") {
+            setTodos([
+                ...todos, {text: text, completed: false, id: uuidv4()}
+            ])
+            setText("");
+        }
     }
 
     const statusHandler = (e) => {

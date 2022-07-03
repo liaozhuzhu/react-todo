@@ -73,7 +73,11 @@ header h1 {
   min-width: 25%;
   font-size: 1.5rem;
   line-height: 1;
-  outline: 1px solid black;
+  border-style: none;
+}
+
+.todo-input:focus {
+  outline: none;
 }
 
 .list-button {
@@ -88,7 +92,6 @@ header h1 {
 #add {
   background: lightgreen;
   color: black;
-  outline: 1px solid black;
 }
 
 #complete {
