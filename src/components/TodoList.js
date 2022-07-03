@@ -1,12 +1,11 @@
 import Todo from "./Todo";
 
-const TodoList = ({todos}) => {
-    console.log(todos);
+const TodoList = ({todos, setTodos, filter}) => {
     return (
         <div className="todo-container">
             <ul className="todo-list">
-                {todos.map(todo => (
-                    <Todo text={todo.text} />
+                {filter.map((todo) => (
+                    <Todo text={todo.text} todo={todo} todos={todos} setTodos={setTodos} key={todo.id}/>
                 ))}
             </ul>
         </div>
