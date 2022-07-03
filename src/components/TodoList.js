@@ -9,7 +9,7 @@ const TodoList = ({todos, setTodos, filterTodo}) => {
                 ))}
             </ul>
         </div>
-    )
+    ) 
 }
 
 export default TodoList;

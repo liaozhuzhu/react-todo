@@ -6,7 +6,7 @@ const Form = ({text, setText, todos, setTodos, setStatus}) => {
         setText(e.target.value);
     } 
 
-    const submitHandler = (e) => {
+    const submitHandler = (e) => { 
         e.preventDefault();
         if (text !== "") {
             setTodos([
