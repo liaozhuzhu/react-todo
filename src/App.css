@@ -51,6 +51,10 @@ header {
   min-width: 25%;
 }
 
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
 .list-button {
   color: white;
   border: none;
