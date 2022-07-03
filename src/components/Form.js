@@ -21,7 +21,7 @@ const Form = ({text, setText, todos, setTodos, setStatus}) => {
     return (
         <form className="todo-form">
             <div className="input-container">
-                <input value={text} onChange={inputHandler} type="text" className="todo-input" autoFocus placeholder='Take a Note'/>
+                <input value={text} onChange={inputHandler} type="text" className="todo-input" autoFocus placeholder="Take a Note"/>
                 <button onClick={submitHandler} className="list-button" id="add" type="submit">+</button>
             </div>
             <div className="select-container">
